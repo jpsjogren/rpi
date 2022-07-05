@@ -10,14 +10,16 @@ def query_records():
     # Starta vattning
     time = request.args.get('time')
     pin = request.args.get('pin')
-    print(type(time))
+    print(type(pin))
+    print(pin)
+    print(--------)
     try:
         time = int(time)
         pin = int(pin)
     except:
        time = 5
        pin = 21
-    print(type(time))
+    print(type(pin))
     print(time)
     response = watering(time, pin)
     return Response(status=response)
