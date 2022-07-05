@@ -2,4 +2,4 @@
 
 git pull
 
-sudo nohup python test.py > log.txt 2>&1 &
+sudo nohup python api.py > log.txt 2>&1 &
