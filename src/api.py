@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, Response
-from watering import *
+from water import *
 
 app = Flask(__name__)
 
@@ -9,15 +9,18 @@ def query_records():
 
     # Starta vattning
     time = request.args.get('time')
+    pin = request.args.get('pin')
     print(type(time))
     try:
         time = int(time)
+        pin = int(pin)
     except:
        time = 5
+       pin = 21
     print(type(time))
     print(time)
-    response = watering(time)
-    return Response(status=201)
+    response = watering(time, pin)
+    return Response(status=response)
 
 @app.route('/', methods=['GET'])
 def update_record():
