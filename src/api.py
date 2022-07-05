@@ -12,7 +12,7 @@ def query_records():
     pin = request.args.get('pin')
     print(type(pin))
     print(pin)
-    print(--------)
+    print("--------")
     try:
         time = int(time)
         pin = int(pin)
