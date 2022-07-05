@@ -25,7 +25,7 @@ def query_records():
 @app.route('/', methods=['GET'])
 def update_record():
     # Är det färdigt?
-    dict = getStatus()
+    # dict = getStatus()
 
     return Response(status=200)
 
