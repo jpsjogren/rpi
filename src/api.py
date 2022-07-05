@@ -20,7 +20,7 @@ def query_records():
        time = 5
        pin = 21
     print(type(pin))
-    print(time)
+    print(pin)
     response = watering(time, pin)
     return Response(status=response)
 

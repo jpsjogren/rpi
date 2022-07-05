@@ -5,10 +5,11 @@ def watering(to_water, pin):
 
 
     # Start async job in background
+    print(pin)
     if pin is None:
-        pin = 21
-    else:
         return 400
+    else:
+        pin = pin
 
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(pin, GPIO.OUT)
