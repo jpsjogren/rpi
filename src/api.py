@@ -36,14 +36,12 @@ def shutdown():
     shutdown_server()
     return 'Server shutting down...'
 
-'''
-@app.route('/', methods=['GET'])
-def index():
-    # Är det färdigt?
-    dict = watering()
-   #  dict = {"test": "GET"}
-    return jsonify(dict)
 
-'''
+@app.route('/ping', methods=['GET'])
+def index():
+    return Response(status=200)
+
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)
