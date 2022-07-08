@@ -6,7 +6,7 @@ def watering(to_water, pin):
 
     # Start async job in background
     print(pin)
-    if pin is None:
+    if pin is None or 0 or 1:
         return 400
     else:
         pin = pin
