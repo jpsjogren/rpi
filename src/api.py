@@ -17,8 +17,7 @@ def query_records():
         time = int(time)
         pin = int(pin)
     except:
-       time = 5
-       pin = 21
+       return Response(status=400)
     print(type(pin))
     print(pin)
     response = watering(time, pin)
